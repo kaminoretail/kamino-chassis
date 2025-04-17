@@ -1,0 +1,39 @@
+[project]
+name = "chassis"
+version = "0.1.0"
+description = "Minimalist flask foundation for rapidly building HTTP APIs."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "flask>=3.1.0",
+    "pydantic>=2.11.3",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.3.5",
+    "black>=24.8.0",
+    "isort>=5.13.0",
+    "flake8>=7.1.0",
+    "flake8-pyproject>=1.2.0",
+    "mypy>=1.11.0",
+]
+
+[tool.black]
+line-length = 79
+target-version = ['py313']
+
+[tool.isort]
+force_single_line = true
+line_length = 79
+
+[tool.flake8]
+max-line-length = 79
+
+[tool.mypy]
+mypy_path = "$MYPY_CONFIG_FILE_DIR/src"
+
