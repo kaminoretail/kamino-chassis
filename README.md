@@ -11,7 +11,7 @@ Before you begin, ensure you have met the following requirements:
 
 ```bash
 # install uv
-$ curl -LsSf https://astral.sh/uv/install.sh | less
+$ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # run local server
 $ uv run -- flask --app chassis.wsgi:application run -p 3000
